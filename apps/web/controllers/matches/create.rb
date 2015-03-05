@@ -4,6 +4,7 @@ module Web::Controllers::Matches
     include Authentication
 
     params do
+      param :authentication_token, presence: true
       param :scheduled_at, type: DateTime
       param :opponent_id, type: Integer, presence: true
     end
