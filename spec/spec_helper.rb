@@ -6,3 +6,14 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 Lotus::Application.preload!
+
+class MiniTest::Spec
+  after :each do
+    [
+      UserRepository,
+      MatchRepository,
+      ScoreRepository,
+      DeviceRepository
+    ].each(&:clear)
+  end
+end

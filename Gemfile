@@ -12,6 +12,7 @@ gem 'active_model_serializers'
 group :test do
   gem 'minitest'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :development, :test do

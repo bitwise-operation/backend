@@ -20,6 +20,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     coderay (1.1.0)
+    database_cleaner (1.4.0)
     dotenv (1.0.2)
     http_router (0.11.1)
       rack (>= 1.0.0)
@@ -86,6 +87,7 @@ DEPENDENCIES
   activemodel
   bundler
   capybara
+  database_cleaner
   lotus-model (~> 0.2)
   lotusrb (= 0.2.1)
   minitest
