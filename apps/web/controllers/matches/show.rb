@@ -1,3 +1,5 @@
+require_relative '../../../../lib/serializers/match_serializer'
+
 module Web::Controllers::Matches
   class Show
     include Lotus::Action
@@ -6,11 +8,7 @@ module Web::Controllers::Matches
       match = MatchRepository.find(params[:id])
 
       self.format = :json
-      self.body = JSON.generate({
-        match: {
-          scheduled_at: match.scheduled_at.iso8601
-        }
-      })
+      self.body = MatchSerializer.new(match).to_json
     end
   end
 end
