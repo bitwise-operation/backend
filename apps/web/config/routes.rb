@@ -1,3 +1,5 @@
+get '/', to: 'home#index'
+
 # GET /matches/:id
 get '/matches/:id', to: 'matches#show'
 

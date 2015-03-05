@@ -1,8 +1,10 @@
 module Web::Controllers::Home
   class Index
-    include Web::Action
+    include Lotus::Action
 
     def call(params)
+      self.format = :json
+      self.body = JSON.generate({success: true})
     end
   end
 end
