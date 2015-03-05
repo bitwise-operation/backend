@@ -1,5 +1,3 @@
-require Lotus::Configuration.new.root.join('lib', 'serializers', 'match_serializer')
-
 module Web::Controllers::Matches
   class Show
     include Lotus::Action
