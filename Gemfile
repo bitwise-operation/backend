@@ -9,6 +9,8 @@ gem 'lotus-model', '~> 0.2'
 gem 'activemodel'
 gem 'active_model_serializers'
 
+gem 'pg'
+
 group :test do
   gem 'minitest'
   gem 'capybara'
