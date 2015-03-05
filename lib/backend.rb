@@ -28,11 +28,12 @@ Lotus::Model.configure do
   #
   mapping do
     collection :users do
-    entity User
+      entity User
+      repository UserRepository
 
-    attribute :id, Integer
-    attribute :name, String
-    attribute :avatar, String
-  end
+      attribute :id, Integer
+      attribute :name, String
+      attribute :avatar, String
+    end
   end
 end.load!
