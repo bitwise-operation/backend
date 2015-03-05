@@ -35,5 +35,35 @@ Lotus::Model.configure do
       attribute :name, String
       attribute :avatar, String
     end
+
+    collection :scores do
+      entity Score
+      repository ScoreRepository
+
+      attribute :id, Integer
+      attribute :user_id, Integer
+      attribute :match_id, Integer
+      attribute :count, Integer
+    end
+
+    collection :matches do
+      entity Match
+      repository MatchRepository
+
+      attribute :id, Integer
+      attribute :left_score_id, Integer
+      attribute :right_score_id, Integer
+      attribute :scheduled_at, DateTime
+      attribute :status, String
+    end
+
+    collection :devices do
+      entity Device
+      repository DeviceRepository
+
+      attribute :id, Integer
+      attribute :user_id, Integer
+      attribute :token, String
+    end
   end
 end.load!
