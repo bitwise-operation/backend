@@ -1,4 +1,4 @@
 class MatchSerializer < BaseSerializer
-  serializes :match
+  root :match
   attributes :scheduled_at
 end

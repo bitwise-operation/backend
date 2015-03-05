@@ -3,8 +3,8 @@ class BaseSerializer
     @@attrs = attrs
   end
 
-  def self.serializes(model)
-    @@model = model
+  def self.root(root)
+    @@root = root
   end
 
   def to_json
@@ -19,7 +19,7 @@ class BaseSerializer
     end]
 
     JSON.generate({
-      @@model => attr_hash
+      @@root => attr_hash
     })
   end
 
