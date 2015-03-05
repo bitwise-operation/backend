@@ -51,6 +51,7 @@ Lotus::Model.configure do
       repository MatchRepository
 
       attribute :id, Integer
+      attribute :winner_id, Integer
       attribute :left_score_id, Integer
       attribute :right_score_id, Integer
       attribute :scheduled_at, DateTime
