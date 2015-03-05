@@ -1,4 +1,4 @@
-require_relative '../../../../lib/serializers/match_serializer'
+require Lotus::Configuration.new.root.join('lib', 'serializers', 'match_serializer')
 
 module Web::Controllers::Matches
   class Show
