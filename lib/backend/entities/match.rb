@@ -3,8 +3,8 @@ require 'lotus/model'
 class Match
   include Lotus::Entity
   attributes :winner_id,
-             :left_score_id,
-             :right_score_id,
+             :creator_id,
+             :opponent_id,
              :scheduled_at,
              :status
 end

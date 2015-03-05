@@ -52,8 +52,8 @@ Lotus::Model.configure do
 
       attribute :id, Integer
       attribute :winner_id, Integer
-      attribute :left_score_id, Integer
-      attribute :right_score_id, Integer
+      attribute :creator_id, Integer
+      attribute :opponent_id, Integer
       attribute :scheduled_at, DateTime
       attribute :status, String
     end
