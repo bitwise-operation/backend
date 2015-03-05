@@ -10,10 +10,10 @@ Lotus::Application.preload!
 class MiniTest::Spec
   after :each do
     [
-      UserRepository,
-      MatchRepository,
       ScoreRepository,
-      DeviceRepository
+      MatchRepository,
+      DeviceRepository,
+      UserRepository,
     ].each(&:clear)
   end
 end
