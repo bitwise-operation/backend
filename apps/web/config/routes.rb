@@ -1,11 +1,11 @@
 # GET /matches/:id
 get '/matches/:id', to: 'matches#show'
 
-# GET /matches # Nice to have
-get '/matches', to: 'matches#index'
+## GET /matches # Nice to have
+#get '/matches', to: 'matches#index'
 
 # POST /matches
-post '/matches', to: 'matches#create'
+post '/matches', to: 'matches#create', as: :create_match
 
 # PATCH /matches/:match_id/confirm
 patch '/matches/:match_id/confirm', to: 'matches#confirm'

@@ -14,6 +14,10 @@ group :test do
   gem 'capybara'
 end
 
+group :development, :test do
+  gem 'pry'
+end
+
 group :production do
   # gem 'puma'
 end
