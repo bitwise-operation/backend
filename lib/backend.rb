@@ -14,7 +14,7 @@ Lotus::Model.configure do
   #    adapter type: :sql, uri: 'postgres://localhost/backend_development'
   #    adapter type: :sql, uri: 'mysql://localhost/backend_development'
   #
-  adapter type: :file_system, uri: ENV['BACKEND_DATABASE_URL']
+  adapter type: :file_system, uri: ENV['DATABASE_URL']
   UserRepository.adapter = adapter
 
   ##
