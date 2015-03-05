@@ -7,8 +7,7 @@ module Web::Controllers::Users
     end
 
     def call(params)
-      u = User.new(name: params[:name], avatar: params[:avatar])
-      user = UserRepository.create(u)
+      user = UserRepository.create(params)
 
       self.format = :json
       self.body = JSON.generate({
