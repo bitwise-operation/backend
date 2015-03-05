@@ -20,7 +20,7 @@ get '/matches/:match_id/scores/:user_id', to: 'scores#show'
 post '/matches/:match_id/scores/:user_id', to: 'scores#create'
 
 # GET /users/:id # Nice to have
-post '/users/:id', to: 'users#show'
+get '/users/:id', to: 'users#show'
 
 # POST /users
 post '/user', to: 'users#create'

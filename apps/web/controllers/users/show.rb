@@ -1,10 +1,14 @@
 module Web::Controllers::Users
-  class Create
+  class Show
     include Lotus::Action
 
+    # params do
+    #   param :name, presence: true
+    #   param :avatar
+    # end
+
     def call(params)
-      u = User.new(name: params[:name], avatar: params[:avatar])
-      user = UserRepository.create(u)
+      user = UserRepository.find(params[:id])
 
       self.format = :json
       self.body = JSON.generate({
