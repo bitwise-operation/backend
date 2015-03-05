@@ -10,8 +10,8 @@ Lotus::Application.preload!
 class MiniTest::Spec
   after :each do
     [
-      ScoreRepository,
       MatchRepository,
+      ScoreRepository,
       DeviceRepository,
       UserRepository,
     ].each(&:clear)

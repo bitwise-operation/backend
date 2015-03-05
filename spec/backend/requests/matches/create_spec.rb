@@ -27,7 +27,7 @@ describe Web::Controllers::Matches::Create do
   end
 
   it 'sets match attributes properly' do
-    assert_equal creator, match.creator
-    assert_equal opponent, match.opponent
+    assert_equal creator, match.creator.user
+    assert_equal opponent, match.opponent.user
   end
 end

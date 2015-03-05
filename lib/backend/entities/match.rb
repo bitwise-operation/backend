@@ -13,10 +13,10 @@ class Match
   attribute :status, type: DateTime
 
   def creator
-    UserRepository.find(creator_id)
+    ScoreRepository.find(creator_id)
   end
 
   def opponent
-    UserRepository.find(opponent_id)
+    ScoreRepository.find(opponent_id)
   end
 end
