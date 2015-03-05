@@ -14,6 +14,7 @@ module Web
       # Remember to add directories here when you create new.
       #
       load_paths << [
+        'config/init',
         'controllers',
         'views'
       ]
