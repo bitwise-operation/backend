@@ -1,6 +1,7 @@
 module Web::Controllers::Matches
   class Create
     include Lotus::Action
+    include Authentication
 
     params do
       param :scheduled_at, type: DateTime

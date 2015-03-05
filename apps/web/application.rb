@@ -154,7 +154,7 @@ module Web
     #
     configure :development do
       # Don't handle exceptions, render the stack trace
-      handle_exceptions false
+      handle_exceptions true
 
       # Serve static assets during development
       serve_assets      true
