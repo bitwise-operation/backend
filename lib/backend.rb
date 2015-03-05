@@ -34,6 +34,7 @@ Lotus::Model.configure do
       attribute :id, Integer
       attribute :name, String
       attribute :avatar, String
+      attribute :authentication_token, String
     end
 
     collection :scores do
