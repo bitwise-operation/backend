@@ -23,7 +23,7 @@ describe Web::Controllers::Matches::Create do
 
   it 'succeeds' do
     assert last_response.ok?
-    assert_equal 1, MatchRepository.all.count
+    assert_equal 1, MatchRepository.count
   end
 
   it 'sets match attributes properly' do
