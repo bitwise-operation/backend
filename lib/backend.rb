@@ -15,6 +15,7 @@ Lotus::Model.configure do
   #    adapter type: :sql, uri: 'mysql://localhost/backend_development'
   #
   adapter type: :file_system, uri: ENV['BACKEND_DATABASE_URL']
+  UserRepository.adapter = adapter
 
   ##
   # Database mapping
@@ -26,12 +27,12 @@ Lotus::Model.configure do
   # Alternatively, you can use a block syntax like the following:
   #
   mapping do
-    # collection :users do
-    #   entity     User
-    #   repository UserRepository
-    #
-    #   attribute :id,   Integer
-    #   attribute :name, String
-    # end
+    collection :users do
+    entity User
+
+    attribute :id, Integer
+    attribute :name, String
+    attribute :avatar, String
+  end
   end
 end.load!
