@@ -26,6 +26,6 @@ describe Web::Controllers::Matches::Confirm do
   end
 
   it 'updates match status' do
-    assert_equal state, match.state
+    assert_equal 'confirmed', json['match']['state']
   end
 end

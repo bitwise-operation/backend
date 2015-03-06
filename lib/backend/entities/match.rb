@@ -9,7 +9,7 @@ class Match
   attribute :opponent_id, type: Integer, presence: true
   attribute :winner_id
   attribute :scheduled_at, type: DateTime
-  attribute :state, type: DateTime
+  attribute :state, type: String
 
   def creator
     ScoreRepository.find(creator_id)

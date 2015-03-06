@@ -7,7 +7,7 @@ module Web::Controllers::Matches
 
     def call(params)
       match = MatchRepository.find(params[:id])
-      match.confirm
+      match.state = 'confirmed'
       MatchRepository.update(match)
 
       self.format = :json
