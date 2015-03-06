@@ -22,4 +22,20 @@ class Match
   def confirm
     self.state = 'confirmed'
   end
+
+  def schedule
+    self.state = 'scheduled'
+  end
+
+  def start
+    self.state = 'started'
+  end
+
+  def complete
+    self.state = 'completed'
+  end
+
+  def draw
+    self.state = 'drawn'
+  end
 end
