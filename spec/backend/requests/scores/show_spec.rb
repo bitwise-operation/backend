@@ -15,7 +15,7 @@ describe Web::Controllers::Scores::Show do
   let(:opponent) { ScoreRepository.create(Score.new(user_id: UserRepository.create(User.new).id, count: 42)) }
   let(:match) { MatchRepository.create(Match.new(creator_id: creator.id, opponent_id: opponent.id)) }
 
-  it 'provides a score for the requested user' do
+  it 'provides a score for the requested match' do
     get app.routes.path(:show_score, match.id)
 
     assert_equal 10, json['score_for_creator']

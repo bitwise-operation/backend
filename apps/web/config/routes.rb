@@ -19,7 +19,7 @@ delete '/matches/:id', to: 'matches#destroy'
 get '/matches/:match_id/score', to: 'scores#show', as: :show_score
 
 # POST /matches/:match_id/scores/:id
-post '/matches/:match_id/scores/:user_id', to: 'scores#create'
+post '/matches/:match_id/scores/:user_id', to: 'scores#create', as: :increment_score
 
 # GET /users/:id # Nice to have
 get '/users/:id', to: 'users#show'

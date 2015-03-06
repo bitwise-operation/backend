@@ -7,4 +7,9 @@ class Score
   def user
     UserRepository.find(user_id)
   end
+
+  def increment
+    self.count ||= 0
+    self.count += 1
+  end
 end

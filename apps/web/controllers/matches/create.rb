@@ -13,8 +13,8 @@ module Web::Controllers::Matches
     def call(params)
       self.format = :json
 
-      creator  = ScoreRepository.create(Score.new(user_id: params[:match][:creator_id]))
-      opponent = ScoreRepository.create(Score.new(user_id: params[:match][:opponent_id]))
+      creator  = ScoreRepository.create(Score.new(user_id: params[:match][:creator_id], count: 0))
+      opponent = ScoreRepository.create(Score.new(user_id: params[:match][:opponent_id], count: 0))
 
       match = Match.new(
         params[:match].to_hash.merge(
