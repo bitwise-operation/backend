@@ -4,11 +4,9 @@ module Web::Controllers::Scores
 
     def call(params)
       match = MatchRepository.find(params[:match_id])
-      user  = UserRepository.find(params[:user_id])
-      score = match.score_for(user)
 
       self.format = :json
-      self.body = ScoreSerializer.new(score).to_json
+      self.body = ScoreSerializer.new(match).to_json
     end
   end
 end

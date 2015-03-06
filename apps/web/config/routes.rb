@@ -16,7 +16,7 @@ patch '/matches/:match_id/confirm', to: 'matches#confirm'
 delete '/matches/:id', to: 'matches#destroy'
 
 # GET /matches/:match_id/scores/:id
-get '/matches/:match_id/scores/:user_id', to: 'scores#show'
+get '/matches/:match_id/score', to: 'scores#show', as: :show_score
 
 # POST /matches/:match_id/scores/:id
 post '/matches/:match_id/scores/:user_id', to: 'scores#create'
