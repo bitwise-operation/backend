@@ -46,7 +46,7 @@ class BaseSerializer
   end
 
   def to_json
-    if @root
+    if self.class.get_root
       JSON.generate({
         self.class.get_root => to_hash
       })
