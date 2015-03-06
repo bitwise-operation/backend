@@ -1,0 +1,11 @@
+<header>
+<h1>Scheduled Matches</h1>
+</header>
+
+<% matches.each do |match| %>
+  Match Id: <%= match.id %>
+  Match Time: <%= match.scheduled_at %>
+  Match Status: <%= match.state %>
+  Challenger: <%= match.creator_name %>
+  Opponent: <%= match.opponent_name %>
+<% end %>

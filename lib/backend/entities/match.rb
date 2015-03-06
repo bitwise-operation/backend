@@ -15,8 +15,16 @@ class Match
     ScoreRepository.find(creator_id)
   end
 
+  def creator_name
+    UserRepository.find(creator_id).name
+  end
+
   def opponent
     ScoreRepository.find(opponent_id)
+  end
+
+  def opponent_name
+    UserRepository.find(opponent_id).name
   end
 
   def confirm

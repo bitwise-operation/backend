@@ -3,8 +3,7 @@ module Web::Controllers::Home
     include Lotus::Action
 
     def call(params)
-      self.format = :json
-      self.body = JSON.generate({success: true})
+      self.format = :html
     end
   end
 end
