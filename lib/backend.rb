@@ -56,7 +56,7 @@ Lotus::Model.configure do
       attribute :creator_id, Integer
       attribute :opponent_id, Integer
       attribute :scheduled_at, DateTime
-      attribute :status, String
+      attribute :state, String
     end
 
     collection :devices do

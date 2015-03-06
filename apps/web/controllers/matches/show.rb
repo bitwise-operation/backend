@@ -1,7 +1,6 @@
 module Web::Controllers::Matches
   class Show
     include Lotus::Action
-
     def call(params)
       match = MatchRepository.find(params[:id])
 

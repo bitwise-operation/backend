@@ -7,9 +7,9 @@ class Match
 
   attribute :creator_id,  type: Integer, presence: true
   attribute :opponent_id, type: Integer, presence: true
-  attribute :winner_id,  type: Integer
+  attribute :winner_id
   attribute :scheduled_at, type: DateTime
-  attribute :status, type: DateTime
+  attribute :state, type: DateTime
 
   def creator
     ScoreRepository.find(creator_id)
@@ -17,5 +17,9 @@ class Match
 
   def opponent
     ScoreRepository.find(opponent_id)
+  end
+
+  def confirm
+    self.state = 'confirmed'
   end
 end

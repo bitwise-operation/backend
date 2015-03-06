@@ -1,14 +1,13 @@
 module Web::Controllers::Matches
   class Confirm
     include Lotus::Action
-
     params do
-      param :id, presence: true
+      param :id
     end
 
     def call(params)
       match = MatchRepository.find(params[:id])
-      match.status = 'confirmed'
+      match.confirm
       MatchRepository.update(match)
 
       self.format = :json

@@ -10,7 +10,7 @@ get '/matches', to: 'matches#index', as: :index_matches
 post '/matches', to: 'matches#create', as: :create_match
 
 # PATCH /matches/:match_id/confirm
-patch '/matches/:match_id/confirm', to: 'matches#confirm'
+patch '/matches/:id/confirm', to: 'matches#confirm', as: :confirm_match
 
 # DELETE /matches/:match_id
 delete '/matches/:id', to: 'matches#destroy'
