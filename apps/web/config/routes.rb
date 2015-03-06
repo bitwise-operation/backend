@@ -3,8 +3,8 @@ get '/', to: 'home#index'
 # GET /matches/:id
 get '/matches/:id', to: 'matches#show'
 
-## GET /matches # Nice to have
-#get '/matches', to: 'matches#index'
+# GET /matches # Nice to have
+get '/matches', to: 'matches#index', as: :index_matches
 
 # POST /matches
 post '/matches', to: 'matches#create', as: :create_match

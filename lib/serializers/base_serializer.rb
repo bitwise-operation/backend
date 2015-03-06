@@ -1,3 +1,5 @@
+require 'active_support/inflector'
+
 class BaseSerializer
   attr_reader :object
 
@@ -17,8 +19,22 @@ class BaseSerializer
     @root
   end
 
-  def to_json
-    attr_hash = Hash[self.class.read_attributes.map do |attribute|
+  def self.serialize_list(objects)
+    list = objects.map { |object| new(object).to_hash }
+
+    JSON.generate(
+      if get_root
+        {
+          get_root.to_s.pluralize => list
+        }
+      else
+        list
+      end
+    )
+  end
+
+  def to_hash
+    Hash[self.class.read_attributes.map do |attribute|
       value = if respond_to?(attribute)
                 send(attribute)
               else
@@ -27,13 +43,15 @@ class BaseSerializer
 
       [attribute, value]
     end]
+  end
 
+  def to_json
     if @root
       JSON.generate({
-        self.class.get_root => attr_hash
+        self.class.get_root => to_hash
       })
     else
-      JSON.generate(attr_hash)
+      JSON.generate(to_hash)
     end
   end
 

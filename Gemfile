@@ -8,8 +8,7 @@ gem 'rake'
 gem 'lotusrb',      '0.2.1'
 gem 'lotus-model', '~> 0.2'
 
-gem 'activemodel'
-gem 'active_model_serializers'
+gem 'activesupport'
 
 gem 'pg'
 
