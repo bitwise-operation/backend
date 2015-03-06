@@ -1,3 +1,5 @@
+require_relative './base_serializer'
+
 class ScoreSerializer < BaseSerializer
   attributes :score_for_creator, :score_for_opponent
 
