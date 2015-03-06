@@ -38,7 +38,7 @@ class BaseSerializer
       value = if respond_to?(attribute)
                 send(attribute)
               else
-                @object.send(attribute)
+                @object.public_send(attribute)
               end
 
       [attribute, value]
