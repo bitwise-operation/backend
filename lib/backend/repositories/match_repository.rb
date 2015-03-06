@@ -6,4 +6,8 @@ class MatchRepository
   def self.count
     query.count
   end
+
+  def self.confirmed
+    query { where(state: 'confirmed') }
+  end
 end
