@@ -56,4 +56,8 @@ class Match
       end
     end
   end
+
+  def match_time
+    scheduled_at.strftime('%H:%M %P')
+  end
 end
