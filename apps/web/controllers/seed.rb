@@ -14,7 +14,7 @@ class Seed
                     User.new(name: 'Angie Terrell', avatar: 'http://www.bignerdranch.com/img/nerds/headshots/angie-terrell.jpg'
                       )).id, count: 0))
       match1 = MatchRepository.create(
-              Match.new(creator_id: creator1.id, opponent_id: opponent1.id, state: 'scheduled', scheduled_at: Time.now + 60*60*1))
+              Match.new(creator_id: creator1.id, opponent_id: opponent1.id, state: 'confirmed', scheduled_at: Time.now + 60*60*1))
       creator2 = ScoreRepository.create(
                 Score.new(user_id: UserRepository.create(
                     User.new(name: 'Kristin Marsicano', avatar: 'http://www.bignerdranch.com/img/nerds/headshots/kristin-marsicano.jpg'
@@ -24,10 +24,10 @@ class Seed
                     User.new(name: 'Kylie Stradley', avatar: 'http://www.bignerdranch.com/img/nerds/headshots/kylie-stradley.jpg'
                       )).id, count: 0))
       match2 = MatchRepository.create(
-              Match.new(creator_id: creator2.id, opponent_id: opponent2.id, state: 'scheduled', scheduled_at: Time.now + 60*60*2))
+              Match.new(creator_id: creator2.id, opponent_id: opponent2.id, state: 'confirmed', scheduled_at: Time.now + 60*60*2))
       match3 = MatchRepository.create(
-              Match.new(creator_id: creator2.id, opponent_id: opponent1.id, state: 'scheduled', scheduled_at: Time.now + 60*60*3))
+              Match.new(creator_id: creator2.id, opponent_id: opponent1.id, state: 'confirmed', scheduled_at: Time.now + 60*60*3))
       match4 = MatchRepository.create(
-              Match.new(creator_id: creator1.id, opponent_id: opponent2.id, state: 'scheduled', scheduled_at: Time.now + 60*60*4))
+              Match.new(creator_id: creator1.id, opponent_id: opponent2.id, state: 'confirmed', scheduled_at: Time.now + 60*60*4))
   end
 end
