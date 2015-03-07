@@ -58,6 +58,8 @@ class Match
   end
 
   def match_time
-    scheduled_at.strftime('%H:%M %P')
+    if scheduled_at
+      self.scheduled_at.strftime('%H:%M %P')
+    end
   end
 end
