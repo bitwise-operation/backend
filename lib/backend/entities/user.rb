@@ -10,14 +10,18 @@ class User
   end
 
   def win_count
-    MatchRepository.all.count { |match| match.winner_id == self.id }
+    completed_matches.count{ |match| match.winner_id == self.id }
   end
 
-  def match_count
-    MatchRepository.all.count { |match| match.creator_id == self.id || match.opponent_id == self.id }
+  def completed_match_count
+    completed_matches.count{ |match| match.creator_id == self.id || match.opponent_id == self.id }
   end
 
   def loss_count
-    match_count - win_count
+    completed_match_count - win_count
+  end
+
+  def completed_matches
+    MatchRepository.all.select{ |match| match.state == 'completed' }
   end
 end
