@@ -10,7 +10,9 @@ module Web::Controllers::Users
         user: {
           id: user.id,
           name: user.name,
-          avatar: user.avatar
+          avatar: user.avatar,
+          win_count: user.win_count,
+          loss_count: user.loss_count
         }
       })
     end
