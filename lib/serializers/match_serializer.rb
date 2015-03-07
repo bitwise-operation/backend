@@ -3,7 +3,7 @@ require_relative './user_serializer'
 
 class MatchSerializer < BaseSerializer
   root :match
-  attributes :id, :scheduled_at, :state, :creator, :opponent
+  attributes :id, :scheduled_at, :state, :creator, :opponent, :winner_id
 
   def creator
     UserSerializer.new(object.creator.user).to_hash

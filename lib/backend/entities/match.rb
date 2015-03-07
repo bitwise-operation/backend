@@ -46,4 +46,14 @@ class Match
   def draw
     self.state = 'drawn'
   end
+
+  def winner_id
+    if self.state == 'completed'
+      if creator.count > opponent.count
+        creator_id
+      else
+        opponent_id
+      end
+    end
+  end
 end
