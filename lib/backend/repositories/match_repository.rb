@@ -10,4 +10,8 @@ class MatchRepository
   def self.confirmed
     query { where(state: 'confirmed') }
   end
+
+  def self.by_scheduled_at
+    query { order(:scheduled_at) }
+  end
 end
