@@ -1,12 +1,12 @@
 get '/', to: 'home#index'
 
+get '/matches/confirmed', to: 'matches#confirmed', as: :confirmed_matches
+
 # GET /matches/:id
 get '/matches/:id', to: 'matches#show'
 
 # GET /matches # Nice to have
 get '/matches', to: 'matches#index', as: :index_matches
-
-get '/matches/confirmed', to: 'matches#confirmed', as: :confirmed_matches
 
 # POST /matches
 post '/matches', to: 'matches#create', as: :create_match
