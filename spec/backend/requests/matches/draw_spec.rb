@@ -18,7 +18,7 @@ describe Web::Controllers::Matches::Draw do
   let(:state) { 'drawn' }
 
   before do
-    patch app.routes.path(:draw_match, match.id)
+    post app.routes.path(:draw_match, match.id)
   end
 
   it 'succeeds' do

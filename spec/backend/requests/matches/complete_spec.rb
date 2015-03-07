@@ -18,7 +18,7 @@ describe Web::Controllers::Matches::Complete do
   let(:state) { 'completed' }
 
   before do
-    patch app.routes.path(:complete_match, match.id)
+    post app.routes.path(:complete_match, match.id)
   end
 
   it 'succeeds' do

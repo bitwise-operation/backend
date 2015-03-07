@@ -18,7 +18,7 @@ describe Web::Controllers::Matches::Confirm do
   let(:state) { 'confirmed' }
 
   before do
-    patch app.routes.path(:confirm_match, match.id)
+    post app.routes.path(:confirm_match, match.id)
   end
 
   it 'succeeds' do

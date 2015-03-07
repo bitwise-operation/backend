@@ -18,7 +18,7 @@ describe Web::Controllers::Matches::Start do
   let(:state) { 'started' }
 
   before do
-    patch app.routes.path(:start_match, match.id)
+    post app.routes.path(:start_match, match.id)
   end
 
   it 'succeeds' do

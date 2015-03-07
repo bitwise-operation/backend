@@ -18,7 +18,7 @@ describe Web::Controllers::Matches::Schedule do
   let(:state) { 'scheduled' }
 
   before do
-    patch app.routes.path(:schedule_match, match.id)
+    post app.routes.path(:schedule_match, match.id)
   end
 
   it 'succeeds' do
